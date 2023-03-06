@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2C0QJ1YMLM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2C0QJ1YMLM');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+    <script src="scripts/methodtest.js"></script>
+    <title>Part 1 - HTTP with JavaScript</title>
+
+    <style>
+        output {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Part 1 - HTTP with JavaScript</h1>
+    </header>
+
+    <form action="#" id="myForm" name="requestForm">
+        <label for="ID_record">ID:</label><br>
+        <input type="text" name="id" id="ID_record" placeholder="Enter ID" required>
+        <br>
+        <br>
+        <label for="article_name">Article name:</label><br>
+        <input type="text" name="title" id="article_name" placeholder="Enter article name" required>
+        <br>
+        <br>
+        <label for="article_body">Article body:</label><br>
+        <textarea name="body" id="article_body" placeholder="Entert article content"></textarea>
+        <br>
+        <br>
+        <label for="date_record">Date:</label><br>
+        <input type="date" name="date" id="date_record">
+        <br>
+        <br>
+        <!-- change type to "submit"??? -->
+        <button type="button" id="postBtn">Post</button>
+        <button type="button" id="getBtn" formtarget="_self">Get</button>
+        <button type="button" id="putBtn">Put</button>
+        <button type="button" id="deleteBtn">Delete</button>
+    </form>
+    <br>
+    <output id="response">&nbsp;</output>
+
+</body>
+
+</html>

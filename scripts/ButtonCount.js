@@ -9,20 +9,19 @@ class ButtonCount extends HTMLElement {
         let button = document.createElement("button");
 
         // counter variable.
-        let counter = document.createElement("counter"); //may not need counter tbh
+        let counter = 0;
 
         // set button text.
-        counter.innerText = 0;
-        button.innerText = `Times Clicked: ${counter.innerText}`;
+        button.innerText = `Times Clicked: ${counter}`;
 
         // append to shadow.
         shadow.appendChild(button);
-        // shadow.appendChild(counter); dont need
-        
+
         // user clicks the button.
-        button.addEventListener("click", function() {
-            counter.innerText = Number.parseInt(counter.innerText, 10) + 1;
-            button.innerText = `Times Clicked: ${counter.innerText}`;
+        button.addEventListener("click", function () {
+
+            counter++;
+            button.innerText = `Times Clicked: ${counter}`;
         });
     }
 }

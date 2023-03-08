@@ -31,15 +31,29 @@
         <br>
         <br>
         <label for="article_body">Article body:</label><br>
-        <textarea name="body" id="article_body" placeholder="Entert article content"></textarea>
+        <textarea name="body" id="article_body" placeholder="Enter article content"></textarea>
         <br>
-        <label for="date_record"></label><br>
+        <label for="date_record"></label>
         <input type="hidden" name="date" id="date_record">
-        <!-- change type to "submit"??? -->
-        <button type="button" id="postBtn">Post</button>
-        <button type="button" id="getBtn">Get</button>
-        <button type="button" id="putBtn">Put</button>
-        <button type="button" id="deleteBtn">Delete</button>
+        <br>
+        <!-- User chooses FETCH or  XMLHttpRequest request-->
+        <h3> Choose an API to reveal buttons. </h3>
+        <input type="radio" id="XMLH" name="chosen_api" value="XMLH">
+        <label for="XMLH">XMLHttpRequest</label><br>
+        <input type="radio" id="fetch" name="chosen_api" value="fetch" required="required">
+        <label for="fetch">FETCH</label>
+        <br>
+        <br>
+        <!-- XHMLH Buttons -->
+        <button type="button" id="postBtn" hidden="hidden">Post</button>
+        <button type="button" id="getBtn" hidden="hidden">Get</button>
+        <button type="button" id="putBtn" hidden="hidden">Put</button>
+        <button type="button" id="deleteBtn" hidden="hidden">Delete</button>
+        <!-- FETCH Buttons -->
+        <button type="button" id="postBtnFetch" hidden="hidden">Post</button>
+        <button type="button" id="getBtnFetch" hidden="hidden">Get</button>
+        <button type="button" id="putBtnFetch" hidden="hidden">Put</button>
+        <button type="button" id="deleteBtnFetch" hidden="hidden">Delete</button>
     </form>
     <br>
     <output id="response">&nbsp;</output>
